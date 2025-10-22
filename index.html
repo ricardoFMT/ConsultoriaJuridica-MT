@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Jurídica MT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="container">
+            <div class="brand">
+                <span class="brand__logo">CJ</span>
+                <div>
+                    <strong>Consultoria Jurídica MT</strong>
+                    <p>Protegendo negócios, pessoas e o futuro</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#areas">Áreas de Atuação</a>
+                <a href="#advogados">Advogados</a>
+                <a href="#inteligencia">Inteligência</a>
+                <a href="#captacao">Captação</a>
+                <a href="#contato" class="btn btn--outline">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero__content">
+                <div class="hero__text">
+                    <span class="hero__badge">Consultoria jurídica estratégica</span>
+                    <h1>Conectamos especialistas jurídicos com empresas que exigem resultados imediatos.</h1>
+                    <p>Uma plataforma inteligente para captação de clientes, gestão de casos e expansão de bancas parceiras. Transparência, performance e tecnologia a serviço do seu escritório.</p>
+                    <div class="hero__cta">
+                        <a href="#captacao" class="btn">Ver painel de captação</a>
+                        <a href="#advogados" class="btn btn--ghost">Cadastrar especialistas</a>
+                    </div>
+                    <ul class="hero__highlights">
+                        <li>Triagem e qualificação automática de leads</li>
+                        <li>Portal exclusivo para advogados especialistas</li>
+                        <li>Análises de performance em tempo real</li>
+                    </ul>
+                </div>
+                <div class="hero__card">
+                    <div class="card">
+                        <h3>Health-check jurídico 360º</h3>
+                        <p>Faça uma avaliação gratuita e entenda onde sua empresa pode reduzir riscos e aumentar o potencial de ganho.</p>
+                        <form class="card__form" id="healthCheckForm">
+                            <label>
+                                Segmento de atuação
+                                <select name="segmento" required>
+                                    <option value="">Selecione</option>
+                                    <option>Empresarial</option>
+                                    <option>Trabalhista</option>
+                                    <option>Tributário</option>
+                                    <option>Família e Sucessões</option>
+                                    <option>Startups</option>
+                                </select>
+                            </label>
+                            <label>
+                                Principal desafio hoje
+                                <input type="text" name="desafio" placeholder="Ex: Passivo trabalhista" required>
+                            </label>
+                            <button type="submit" class="btn">Quero avaliar meu risco</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="diferenciais">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Porque somos diferentes</span>
+                    <h2>Plataforma inteligente para crescimento jurídico exponencial</h2>
+                    <p>Unimos especialistas de elite com tecnologia proprietária para entregar previsibilidade, escala e novos negócios aos nossos parceiros.</p>
+                </div>
+                <div class="grid grid--3">
+                    <article class="feature">
+                        <span class="feature__icon">⚖️</span>
+                        <h3>Curadoria de especialistas</h3>
+                        <p>Selecionamos advogados com histórico comprovado de performance e cases em suas áreas de atuação. Cada demanda recebe o time ideal.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="feature__icon">📈</span>
+                        <h3>Growth jurídico</h3>
+                        <p>Engine de captação com campanhas segmentadas, nutrição de leads e funil otimizado. Você acompanha em tempo real.</p>
+                    </article>
+                    <article class="feature">
+                        <span class="feature__icon">🔒</span>
+                        <h3>Segurança de ponta</h3>
+                        <p>Conformidade total com LGPD, criptografia e estrutura para lidar com dados sensíveis em processos estratégicos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="areas">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Estrutura modular por nicho</span>
+                    <h2>Atuamos em todas as frentes críticas para empresas e pessoas</h2>
+                </div>
+                <div class="areas" id="areasList"></div>
+            </div>
+        </section>
+
+        <section class="section" id="advogados">
+            <div class="container">
+                <div class="section__header">
+                    <div>
+                        <span class="section__subtitle">Rede de especialistas certificados</span>
+                        <h2>Monte células jurídicas sob demanda</h2>
+                    </div>
+                    <button class="btn btn--outline" id="openLawyerModal">Adicionar especialista</button>
+                </div>
+                <div class="filters">
+                    <button class="btn btn--ghost is-active" data-filter="all">Todos</button>
+                    <button class="btn btn--ghost" data-filter="Empresarial">Empresarial</button>
+                    <button class="btn btn--ghost" data-filter="Tributário">Tributário</button>
+                    <button class="btn btn--ghost" data-filter="Trabalhista">Trabalhista</button>
+                    <button class="btn btn--ghost" data-filter="Família">Família & Sucessões</button>
+                    <button class="btn btn--ghost" data-filter="Startups">Startups</button>
+                </div>
+                <div class="grid grid--3" id="lawyersGrid"></div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="inteligencia">
+            <div class="container intelligence">
+                <div class="intelligence__content">
+                    <span class="section__subtitle">Inteligência acionável</span>
+                    <h2>Insights para decidir com confiança</h2>
+                    <ul class="intelligence__list" id="insightsList"></ul>
+                </div>
+                <div class="intelligence__panel">
+                    <h3>Radar de oportunidades</h3>
+                    <canvas id="intelligenceChart" width="400" height="280" aria-label="Indicadores de oportunidades"></canvas>
+                    <p class="intelligence__description">Acompanhe as tendências jurídicas mais quentes e conecte o especialista certo ao cliente certo no momento perfeito.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="captacao">
+            <div class="container">
+                <div class="section__header">
+                    <div>
+                        <span class="section__subtitle">Funil integrado</span>
+                        <h2>Controle da captação de clientes</h2>
+                        <p>Centralize leads, acompanhe o funil e delegue automaticamente para o especialista mais indicado.</p>
+                    </div>
+                    <button class="btn" id="openLeadModal">Registrar novo lead</button>
+                </div>
+
+                <div class="dashboard">
+                    <div class="dashboard__stats" id="leadStats"></div>
+                    <div class="dashboard__table">
+                        <div class="table__header">
+                            <h3>Leads recentes</h3>
+                            <div class="table__filters">
+                                <select id="statusFilter">
+                                    <option value="all">Todos os status</option>
+                                    <option value="Novo">Novo</option>
+                                    <option value="Qualificado">Qualificado</option>
+                                    <option value="Em negociação">Em negociação</option>
+                                    <option value="Convertido">Convertido</option>
+                                </select>
+                                <select id="areaFilter">
+                                    <option value="all">Todas as áreas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Área</th>
+                                    <th>Origem</th>
+                                    <th>Status</th>
+                                    <th>Responsável</th>
+                                    <th>Próximo passo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leadsTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="cases">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Resultados reais</span>
+                    <h2>Cases de sucesso em diferentes setores</h2>
+                </div>
+                <div class="grid grid--3" id="casesGrid"></div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="container contact">
+                <div class="contact__content">
+                    <span class="section__subtitle">Fale com um estrategista</span>
+                    <h2>Destravamos oportunidades jurídicas com velocidade</h2>
+                    <p>Conte-nos o que precisa. Em até 2 horas úteis um especialista retorna com um plano inicial e os advogados ideais para conduzir seu caso.</p>
+                    <ul class="contact__list">
+                        <li>✔️ Atendimento empresarial em todo Brasil</li>
+                        <li>✔️ Time dedicado para parcerias com outros escritórios</li>
+                        <li>✔️ Acompanhamento por consultor de sucesso do cliente</li>
+                    </ul>
+                </div>
+                <form class="contact__form" id="contactForm">
+                    <label>
+                        Nome completo
+                        <input type="text" name="nome" required>
+                    </label>
+                    <label>
+                        E-mail corporativo
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Telefone / WhatsApp
+                        <input type="tel" name="telefone" required>
+                    </label>
+                    <label>
+                        Descreva sua necessidade
+                        <textarea name="mensagem" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="btn">Quero falar com um especialista</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div>
+                <span class="brand__logo">CJ</span>
+                <strong>Consultoria Jurídica MT</strong>
+                <p>Conectando clientes a especialistas jurídicos com tecnologia e confiança.</p>
+            </div>
+            <div>
+                <h4>Mapa do site</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#areas">Áreas de atuação</a></li>
+                    <li><a href="#advogados">Advogados</a></li>
+                    <li><a href="#captacao">Captação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul>
+                    <li>+55 (65) 9 9999-0000</li>
+                    <li>contato@consultoriajuridicamt.com</li>
+                    <li>Av. da Inovação, 123 - Cuiabá/MT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; <span id="currentYear"></span> Consultoria Jurídica MT. Todos os direitos reservados.</p>
+            <a href="#" class="link">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <div class="modal" id="lawyerModal" aria-hidden="true">
+        <div class="modal__overlay" data-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h3>Adicionar especialista</h3>
+            <form id="lawyerForm">
+                <label>Nome completo
+                    <input type="text" name="nome" required>
+                </label>
+                <label>Área de atuação
+                    <input type="text" name="area" required>
+                </label>
+                <label>OAB / UF
+                    <input type="text" name="oab" required>
+                </label>
+                <label>Resumo da expertise
+                    <textarea name="bio" rows="3" required></textarea>
+                </label>
+                <label>Principais resultados
+                    <textarea name="resultados" rows="3" placeholder="Separe por ponto e vírgula" required></textarea>
+                </label>
+                <button type="submit" class="btn">Salvar especialista</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="leadModal" aria-hidden="true">
+        <div class="modal__overlay" data-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+            <h3>Registrar novo lead</h3>
+            <form id="leadForm">
+                <label>Nome do cliente
+                    <input type="text" name="cliente" required>
+                </label>
+                <label>Área de interesse
+                    <select name="area" required></select>
+                </label>
+                <label>Origem do contato
+                    <select name="origem" required>
+                        <option>Site</option>
+                        <option>Landing page</option>
+                        <option>Indicação</option>
+                        <option>Evento</option>
+                        <option>Campanha paga</option>
+                    </select>
+                </label>
+                <label>Status
+                    <select name="status" required>
+                        <option>Novo</option>
+                        <option>Qualificado</option>
+                        <option>Em negociação</option>
+                        <option>Convertido</option>
+                    </select>
+                </label>
+                <label>Responsável
+                    <input type="text" name="responsavel" placeholder="Nome do advogado" required>
+                </label>
+                <label>Próximo passo
+                    <textarea name="proximoPasso" rows="2" required></textarea>
+                </label>
+                <button type="submit" class="btn">Adicionar lead</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
