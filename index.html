@@ -25,6 +25,7 @@
                 <a href="#advogados">Advogados</a>
                 <a href="#inteligencia">Inteligência</a>
                 <a href="#captacao">Captação</a>
+                <a href="#integracao">Integração</a>
                 <a href="#contato" class="btn btn--outline">Fale Conosco</a>
             </nav>
         </div>
@@ -185,11 +186,46 @@
                                     <th>Status</th>
                                     <th>Responsável</th>
                                     <th>Próximo passo</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody id="leadsTable"></tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="integracao">
+            <div class="container integration">
+                <div class="integration__card">
+                    <span class="section__subtitle">Integração CRM &amp; automação</span>
+                    <h3>Conecte seu funil a uma planilha dinâmica</h3>
+                    <p>Configure um endpoint do Google Sheets, Sheet.best, Airtable ou qualquer CRM com API para manter os dados de captação sempre atualizados.</p>
+                    <form id="integrationForm" class="integration__form">
+                        <label>Endpoint da planilha / CRM
+                            <input type="url" name="endpoint" placeholder="https://script.google.com/..." required>
+                        </label>
+                        <label>Token ou chave de API (opcional)
+                            <input type="text" name="apiKey" placeholder="Bearer xpto-123">
+                        </label>
+                        <div class="integration__actions">
+                            <button type="submit" class="btn">Salvar conexão</button>
+                            <button type="button" class="btn btn--ghost" id="syncLeadsButton">Sincronizar leads agora</button>
+                            <button type="button" class="btn btn--outline" id="exportLeadsButton">Exportar CSV</button>
+                        </div>
+                        <p class="integration__status" id="integrationStatus" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <div class="integration__card integration__card--secondary">
+                    <h4>Guia rápido para usar com Google Sheets</h4>
+                    <ol>
+                        <li>Crie uma planilha e publique um App Script recebendo requisições <code>POST</code>.</li>
+                        <li>Copie a URL gerada pelo deploy e cole no campo de endpoint.</li>
+                        <li>Opcionalmente, adicione validação por token via cabeçalho <code>Authorization</code>.</li>
+                        <li>Clique em “Sincronizar leads” para enviar os dados do pipeline em tempo real.</li>
+                    </ol>
+                    <p>Os leads também ficam salvos localmente neste navegador para manter o histórico mesmo offline.</p>
                 </div>
             </div>
         </section>
@@ -327,7 +363,7 @@
                     </select>
                 </label>
                 <label>Responsável
-                    <input type="text" name="responsavel" placeholder="Nome do advogado" required>
+                    <select name="responsavel" required></select>
                 </label>
                 <label>Próximo passo
                     <textarea name="proximoPasso" rows="2" required></textarea>
