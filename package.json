@@ -1,0 +1,18 @@
+{
+  "name": "ricardo-fernandes-advocacia",
+  "version": "1.0.0",
+  "description": "Site institucional do advogado Ricardo Fernandes da Costa com backend para formulário de contato.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.12",
+    "sqlite": "^5.2.5",
+    "sqlite3": "^5.1.7"
+  }
+}

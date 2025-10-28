@@ -1,0 +1,35 @@
+[
+  {
+    "id": "cartilha-direito-agrario",
+    "title": "5 cuidados contratuais no arrendamento rural",
+    "excerpt": "Entenda os pontos essenciais para formalizar contratos de arrendamento com segurança jurídica e equilíbrio entre as partes.",
+    "author": "Ricardo Fernandes da Costa",
+    "date": "2024-05-20",
+    "category": "Direito Agrário",
+    "imageAlt": "Campo agrícola ao amanhecer",
+    "imagePlaceholder": "AR",
+    "url": "#"
+  },
+  {
+    "id": "direito-empresarial-governanca",
+    "title": "Como implementar boas práticas de governança em pequenas empresas",
+    "excerpt": "Guia introdutório sobre políticas internas, registros societários e adequação à legislação para negócios locais.",
+    "author": "Equipe do Escritório",
+    "date": "2024-04-08",
+    "category": "Direito Empresarial",
+    "imageAlt": "Reunião corporativa com documentos",
+    "imagePlaceholder": "DE",
+    "url": "#"
+  },
+  {
+    "id": "impacto-reforma-tributaria",
+    "title": "Reforma tributária: o que muda para produtores rurais",
+    "excerpt": "Resumo das alterações constitucionais aprovadas e pontos de atenção para quem atua no agronegócio de Mato Grosso.",
+    "author": "Ricardo Fernandes da Costa",
+    "date": "2024-03-12",
+    "category": "Direito Tributário",
+    "imageAlt": "Documentos fiscais analisados",
+    "imagePlaceholder": "DT",
+    "url": "#"
+  }
+]

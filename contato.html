@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Ricardo Fernandes da Costa</title>
+    <meta name="description" content="Entre em contato com o escritório jurídico de Ricardo Fernandes da Costa, OAB/MT nº 18.765, em Brasnorte - MT. Atendimento ético e informativo.">
+    <link rel="canonical" href="https://www.exemplo.com/contato.html">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand__logo" aria-hidden="true">RF</span>
+                <span class="brand__text">
+                    <strong>Ricardo Fernandes da Costa</strong>
+                    <small>Advogado • OAB/MT nº 18.765</small>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="visually-hidden">Abrir menu</span>
+            </button>
+            <nav class="main-nav" id="primary-navigation" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="areas.html">Áreas de Atuação</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container narrow">
+                <p class="eyebrow">Contato</p>
+                <h1>Vamos conversar com transparência</h1>
+                <p>O primeiro contato tem caráter informativo. Utilize o formulário para agendar uma reunião e receber orientações iniciais sobre sua demanda.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <form class="contact-form" id="contactForm" aria-label="Formulário de contato">
+                    <div class="form-field">
+                        <label for="name">Nome completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9 ()+\-]{8,}" placeholder="(65) 3333-0000">
+                    </div>
+                    <div class="form-field">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-field form-field--checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Li e concordo com a <a href="politica-privacidade.html">Política de Privacidade</a>.</label>
+                    </div>
+                    <button class="btn" type="submit">Enviar mensagem</button>
+                    <p class="form-feedback" role="status" aria-live="polite"></p>
+                </form>
+
+                <aside class="contact-details" aria-label="Informações de contato">
+                    <h2>Atendimento presencial e remoto</h2>
+                    <p>Av. dos Pioneiros, 325 - Centro<br>Brasnorte • MT • CEP 78350-000</p>
+                    <ul>
+                        <li><strong>Telefone:</strong> <a href="tel:+556533330000">+55 (65) 3333-0000</a></li>
+                        <li><strong>E-mail:</strong> <a href="mailto:contato@rfadvocacia.com.br">contato@rfadvocacia.com.br</a></li>
+                        <li><strong>Horário:</strong> Segunda a sexta, das 9h às 18h</li>
+                    </ul>
+                    <p>Atendemos com hora marcada para garantir dedicação integral a cada demanda.</p>
+                    <section id="confidencialidade" aria-label="Aviso de confidencialidade">
+                        <h3>Aviso de confidencialidade</h3>
+                        <p>As informações encaminhadas serão utilizadas exclusivamente para avaliação preliminar da consulta. O envio do formulário não constitui contratação automática de serviços jurídicos.</p>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section section--alt">
+            <div class="container split">
+                <div>
+                    <h2>Política de retorno</h2>
+                    <p>As mensagens são respondidas em até dois dias úteis. Caso sua demanda seja urgente, recomendamos contato telefônico durante o horário comercial.</p>
+                </div>
+                <div class="card card--neutral">
+                    <h3>Preferência por atendimento digital</h3>
+                    <p>Reuniões on-line estão disponíveis mediante agendamento prévio. Utilizamos plataformas seguras para proteger dados e documentos compartilhados.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div>
+                <strong>Ricardo Fernandes da Costa</strong><br>
+                OAB/MT nº 18.765<br>
+                Av. dos Pioneiros, 325 - Centro, Brasnorte - MT<br>
+                Atendimento: segunda a sexta, das 9h às 18h
+            </div>
+            <div>
+                <ul class="footer__links">
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="#confidencialidade">Aviso de confidencialidade</a></li>
+                    <li><a href="sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <a href="tel:+556533330000">+55 (65) 3333-0000</a>
+                <a href="mailto:contato@rfadvocacia.com.br">contato@rfadvocacia.com.br</a>
+            </div>
+        </div>
+        <p class="footer__note">© <span class="js-current-year">2024</span> Ricardo Fernandes da Costa. Este site tem caráter exclusivamente informativo e educativo, em conformidade com o Provimento 205/2021 e o Código de Ética e Disciplina da OAB.</p>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+</body>
+</html>
